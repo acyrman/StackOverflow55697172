@@ -8,13 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        tableView.tableFooterView = UITableViewHeaderFooterView()
     }
-
-
+    
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        GEUserSettings.toggleTheme()
+    }
+    
 }
 
